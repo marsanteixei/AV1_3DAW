@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box
+}
+
+.div3{
+		height:100px;
+		padding-top:40px;
+		padding-bottom:10px;
+		text-align:center;
+	
+	}
+
+.div1{
+		margin-top:5px; auto;
+		background-color:lightblue;
+	}
+	
+	

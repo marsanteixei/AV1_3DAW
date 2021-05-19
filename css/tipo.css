@@ -1,0 +1,169 @@
+			.div1{
+				margin-top:5px; auto;
+				background-color:lightblue;
+			}
+			.div2{
+				height:200px;     
+				background-color: lightblue;
+				-webkit-animation-name: example; 
+				-webkit-animation-duration: 15s; 
+				animation-name: example;
+				animation-duration: 15s;
+				
+
+			}
+			
+			@-webkit-keyframes example {
+				0%   {background-color: lightblue;}
+				25%  {background-color: blue;}
+				50%  {background-color: lightblue;}
+				75% {background-color: darkblueblue;}
+				100% {background-color: lightblue;}
+			}
+			
+			@keyframes example {
+				0%   {background-color: lightblue;}
+				25%  {background-color: blue;}
+				50%  {background-color: lightblue;}
+				75% {background-color: darkblue;}
+				100% {background-color: lightblue;}
+			}
+			h1{
+				text-align:center;
+				
+			}
+			
+			.titulo{
+				font-family:verdana;
+				text-align:center;
+				font-size:40px;
+				background-color:blue;
+				margin-top:0px;
+				padding-top:10px;
+				padding-bottom:10px;
+				margin-bottom:40px;
+			}
+			
+			.tbt{
+				font-size:20px;
+				background-color:blue;
+				margin-top:0px;
+				padding-top:10px;
+				padding-bottom:10px;
+				margin-bottom:20px; 
+				
+			}
+			
+			.t{
+				
+				margin-right:50px;
+				margin-left:50px;
+				display:inline;
+			}
+			
+			.b{
+				margin-right:50px;
+				display:inline;
+				
+			}
+			
+			.m{
+				color:white;
+			}
+		    
+			p{
+				text-align:justify;
+				margin-left:20px;
+				font-family:verdana; 
+				font-size: 20px;
+				color:darkblue;
+			}
+					
+			.y{
+				width:200px;
+				height:170px;
+				float:left;
+				margin-left:10px;
+				margin-top:5px;
+
+			}
+			
+			.c{
+				width:200px;
+				height:170px;
+				float:right;
+				margin-right:10px;
+				margin-top:5px;
+			}
+			
+			.div3{
+				height:100px;
+				text-align:center;
+				background-color:blue;
+			}
+			form{
+				width:500px;
+				height:730px;
+				text-align:center;
+				border: 6px ridge blue;
+				margin-left:450px;
+				padding-top: 25px;
+			
+			}
+			label{
+				font-size: 25px;
+				font-family: verdana;
+			}
+			input{
+				background-color: #997ed7;
+				border: 1px solid #000;
+	            margin: auto;
+				border-radius: 10px;
+				width: 300px;
+				height: 50px;
+				padding-left: 22px;
+				cursor: pointer;
+				font-size: 15px;
+				outline: 0;
+				font-family: inherit;
+			}
+			button {
+			font: inherit;
+			cursor: pointer;
+			width:300px;
+			height:40px;
+		}
+
+		.botao {
+			display: inline-block;
+			margin: 1.5em;
+			border: 0;
+			padding: 0.5em 1em;
+			text-decoration: none;
+			color: #FFF;
+			background: #6A5ACD;
+			text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+			border-radius: 0.5em;
+			box-shadow: 3px 3px 0 3px #483D8B;
+			transition: box-shadow 0.3s ease, transform 0.3s ease;
+		}
+
+		.botao:active {
+			box-shadow: 0 0 0 0 #483D8B,
+						inset 4px 4px 4px #483D8B;
+			transform: translate(6px, 6px);
+		}
+			
+		select{
+				background-color: #997ed7;
+				border: 1px solid #000;
+	            margin: auto;
+				border-radius: 10px;
+				width: 300px;
+				height: 50px;
+				padding-left: 22px;
+				cursor: pointer;
+				font-size: 15px;
+				outline: 0;
+				font-family: inherit;
+			}	
