@@ -3,7 +3,7 @@
 	  $user = "root";
 	  $password = "";
 	  $dataBaseName="av1";
-      $conn = mysqli_connect($server,$user,$password,$dataBaseName) or die("connection error: " . $conn->connect_error);
+          $conn = mysqli_connect($server,$user,$password,$dataBaseName) or die("connection error: " . $conn->connect_error);
 
 ?>
 <!DOCTYPE html>
@@ -39,96 +39,96 @@
 				<h1>Alterar Disciplina: </h1>
 				<br>
 				<form action="alterar.php" method="post">
-	            <label>Código da Disciplina :</label><br><br><br><br>
-	            <input type="text" name="codigo" placeholder="Digite o código da disciplina a ser alterada"><br><br>
-				<label>O que será alterado? :</label><br><br><br><br>
-				<select name="tipo">
-                    <option>codigo</option>
-                    <option>nome</option>
-                    <option>periodo</option>
-                    <option>credito</option>
-                </select>
-				<br><br>
+	                          <label>Código da Disciplina :</label><br><br><br><br>
+	                          <input type="text" name="codigo" placeholder="Digite o código da disciplina a ser alterada"><br><br>
+				  <label>O que será alterado? :</label><br><br><br><br>
+				  <select name="tipo">
+                                    <option>codigo</option>
+                                    <option>nome</option>
+                                    <option>periodo</option>
+                                    <option>credito</option>
+                                  </select>
+				    <br><br>
 				<label>A disciplina é pre requisito? :</label><br><br><br><br>
 				<select name="resp">
-                    <option>sim</option>
-                    <option>nao</option>
-                </select>
+                                  <option>sim</option>
+                                  <option>nao</option>
+                               </select>
 				<br><br>
-				<label>Alteração :</label><br><br><br><br>
-	            <input type="text" name="alteracao" placeholder="Digite a alteração: "><br><br>
-	            <button class="botao" name="alterar">Alterar</button>
-				<?php
-				if($_POST){
+			      <label>Alteração :</label><br><br><br><br>
+	                      <input type="text" name="alteracao" placeholder="Digite a alteração: "><br><br>
+	                        <button class="botao" name="alterar">Alterar</button>
+				   <?php
+				        if($_POST){
 					$codigo=$_POST["codigo"];
 					$tipo=$_POST["tipo"];
 					$resp=$_POST["resp"];
 					$alteracao=$_POST["alteracao"];
 					if($resp=='sim'){
 						switch ($tipo) {
-                          case 'codigo':
-						  $query1 = mysqli_query($conn,"UPDATE disciplina SET codigo ='$alteracao' WHERE codigo ='$codigo'");
-						  if($query1){
-						  $query2 = mysqli_query($conn,"UPDATE requisito SET codigo ='$alteracao' WHERE codigo ='$codigo'");
-						  if($query2){
-						  echo "<br><br><br>";
-                          echo "Alteração realizada";}}
-                          break;
-                          case 'nome':
-                          $query3 = mysqli_query($conn,"UPDATE disciplina SET nome ='$alteracao' WHERE codigo ='$codigo'");
+                                                  case 'codigo':
+						   $query1 = mysqli_query($conn,"UPDATE disciplina SET codigo ='$alteracao' WHERE codigo ='$codigo'");
+						   if($query1){
+						   $query2 = mysqli_query($conn,"UPDATE requisito SET codigo ='$alteracao' WHERE codigo ='$codigo'");
+						   if($query2){
+						   echo "<br><br><br>";
+                                                   echo "Alteração realizada";}}
+                                                   break;
+                                                 case 'nome':
+                                                  $query3 = mysqli_query($conn,"UPDATE disciplina SET nome ='$alteracao' WHERE codigo ='$codigo'");
 						  if($query3){
 						  $query4 = mysqli_query($conn,"UPDATE requisito SET nome ='$alteracao' WHERE codigo ='$codigo'");
 						  if($query4){
 						  echo "<br><br><br>";
-                          echo "Alteração realizada";}}
-                          break;
-                          case 'periodo':
-                          $query5 = mysqli_query($conn,"UPDATE disciplina SET periodo = $alteracao WHERE codigo ='$codigo'");
+                                                  echo "Alteração realizada";}}
+                                                  break;
+                                                case 'periodo':
+                                                  $query5 = mysqli_query($conn,"UPDATE disciplina SET periodo = $alteracao WHERE codigo ='$codigo'");
 						  if($query5){
 						  $query6 = mysqli_query($conn,"UPDATE requisito SET periodo = $alteracao WHERE codigo ='$codigo'");
 						  if($query6){
 						  echo "<br><br><br>";
-                          echo "Alteração realizada";}}
-                          break;
-                          default:
-                          $query7 = mysqli_query($conn,"UPDATE disciplina SET credito = $alteracao WHERE codigo ='$codigo'");
+                                                  echo "Alteração realizada";}}
+                                                  break;
+                                                default:
+                                                  $query7 = mysqli_query($conn,"UPDATE disciplina SET credito = $alteracao WHERE codigo ='$codigo'");
 						  if($query7){
 						  $query8 = mysqli_query($conn,"UPDATE requisito SET credito = $alteracao WHERE codigo ='$codigo'");
 						  if($query8){
 						  echo "<br><br><br>";
-                          echo "Alteração realizada";}}
-                        }
-					}
-				    else{
-						switch ($tipo) {
-                          case 'codigo':
-						  $query9 = mysqli_query($conn,"UPDATE disciplina SET codigo ='$alteracao' WHERE codigo ='$codigo'");
-						  if($query9){
-						  echo "<br><br><br>";
-                          echo "Alteração realizada";}
-                          break;
-                          case 'nome':
-                          $query10 = mysqli_query($conn,"UPDATE disciplina SET nome ='$alteracao' WHERE codigo ='$codigo'");
-						  if($query10){
-						  echo "<br><br><br>";
-                          echo "Alteração realizada";}
-                          break;
-                          case 'periodo':
-                          $query11 = mysqli_query($conn,"UPDATE disciplina SET periodo = $alteracao WHERE codigo ='$codigo'");
-						  if($query11){
-						  echo "<br><br><br>";
-                          echo "Alteração realizada";}
-                          break;
-                          default:
-                          $query12 = mysqli_query($conn,"UPDATE disciplina SET credito = $alteracao WHERE codigo ='$codigo'");
-						  if($query12){
-						  echo "<br><br><br>";
-                          echo "Alteração realizada";}
-                        }
-					}
-				}
-				?>
-                </form>
+                                                  echo "Alteração realizada";}}
+                                                }
+					           }
+				                     else{
+						       switch ($tipo) {
+                                                        case 'codigo':
+						         $query9 = mysqli_query($conn,"UPDATE disciplina SET codigo ='$alteracao' WHERE codigo ='$codigo'");
+						         if($query9){
+						         echo "<br><br><br>";
+                                                         echo "Alteração realizada";}
+                                                         break;
+                                                        case 'nome':
+                                                         $query10 = mysqli_query($conn,"UPDATE disciplina SET nome ='$alteracao' WHERE codigo ='$codigo'");
+						         if($query10){
+						         echo "<br><br><br>";
+                                                         echo "Alteração realizada";}
+                                                         break;
+                                                       case 'periodo':
+                                                        $query11 = mysqli_query($conn,"UPDATE disciplina SET periodo = $alteracao WHERE codigo ='$codigo'");
+						        if($query11){
+						        echo "<br><br><br>";
+                                                        echo "Alteração realizada";}
+                                                        break;
+                                                       default:
+                                                        $query12 = mysqli_query($conn,"UPDATE disciplina SET credito = $alteracao WHERE codigo ='$codigo'");
+						        if($query12){
+						        echo "<br><br><br>";
+                                                        echo "Alteração realizada";}
+                                                       }
+					          }
+				             }
+				        ?>
+                               </form>
 				   <br><br><br><br><br>
 				</ul>
 					
