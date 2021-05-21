@@ -39,10 +39,10 @@
 				<ul>
 				<h1>Excluir Disciplina: </h1>
 				<form action="excluir.php" method="post">
-	            <label>Código da Disciplina :</label><br><br><br><br>
-	            <input type="text" name="codigo" placeholder="Digite o código"><br><br>
-				<br><br>
-	            <button class="botao" name="Excluir">Excluir</button>
+	                          <label>Código da Disciplina :</label><br><br><br><br>
+	                          <input type="text" name="codigo" placeholder="Digite o código"><br><br>
+				    <br><br>
+	                          <button class="botao" name="Excluir">Excluir</button>
 				<?php
 				if($_POST){
 					$codigo=$_POST["codigo"];
@@ -63,7 +63,7 @@
 					}
 					}
 				?>
-                </form>
+                               </form>
 				   <br><br><br><br><br>
 				</ul>
 					
