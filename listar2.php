@@ -13,11 +13,11 @@ if ($conn->connect_error) {
 <?php
  echo "<style>
     table{
-		width:520px;
+	    width:520px;
 	    height:460px;
-		margin-left:450px;
-		text-align:center;
-		border: 6px ridge blue;
+	    margin-left:450px;
+	    text-align:center;
+	    border: 6px ridge blue;
 	}
 	 
  </style>";
@@ -27,7 +27,7 @@ if ($conn->connect_error) {
     <th>Nome:</th>
     <th>Período:</th>
     <th>Credito:</th>
-	 <th>Código Requisito:</th>
+    <th>Código Requisito:</th>
   </tr>";
 		
 	$sql =" SELECT d.codigo AS codigodisciplina, d.nome AS nome, d.periodo AS periodo ,d.credito AS credito, r.codigo AS codigorequisito 
@@ -41,16 +41,16 @@ if ($conn->connect_error) {
 
 		while ($linha = mysqli_fetch_assoc($resultado)) {
             echo "<tr>";
-			echo "<td>" . $linha["codigodisciplina"] . "</td>";
+	    echo "<td>" . $linha["codigodisciplina"] . "</td>";
             echo "<td>" . $linha["nome"] . "</td>";
             echo "<td>" . $linha["periodo"] . "</td>";
             echo "<td>" . $linha["credito"] . "</td>";
-			echo "<td>" . $linha["codigorequisito"] . "</td>";
+	    echo "<td>" . $linha["codigorequisito"] . "</td>";
             echo "</tr>";
 		}
 
 	} else {
-		echo "Não há disciplinas cadastradas !";
+	   echo "Não há disciplinas cadastradas !";
 	}
 echo "</table>";	
 $conn->close();
