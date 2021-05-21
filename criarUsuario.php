@@ -5,11 +5,11 @@
 	  $user = "root";
 	  $password = "";
 	  $dataBaseName="av1";
-      $conn = mysqli_connect($server,$user,$password,$dataBaseName) or die("connection error: " . $conn->connect_error);
+          $conn = mysqli_connect($server,$user,$password,$dataBaseName) or die("connection error: " . $conn->connect_error);
 	  $nome =$_POST["nome"];
 	  $email =$_POST["email"];
 	  $senha=$_POST["senha"];
-      $perfil =$_POST["perfil"];
+          $perfil =$_POST["perfil"];
 	  $query = mysqli_query($conn,"INSERT INTO usuarios (nome, email,senha, perfil) VALUES ('$nome', '$email','$senha', '$perfil')");
 	  if($query){
 		 echo "<br><br>";
