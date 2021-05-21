@@ -1,4 +1,4 @@
-f<?php
+<?php
 	include("./criar2.php");
 	if ($_POST) {
 		$server = "localhost";
