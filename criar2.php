@@ -36,8 +36,8 @@
 				<ul>
 				<form action="adicionarPre.php" method="post">
 				<label>Selecione a Disciplina que terá pre requisito:</label><br><br><br>
-	            <select name = "iddisciplina">
-				<?php
+	                        <select name = "iddisciplina">
+				  <?php
 				  $sql="SELECT * FROM disciplina";
 				  $resultado= mysqli_query($conn,$sql);
 				  while($elemento = mysqli_fetch_assoc($resultado)){ 
@@ -45,23 +45,23 @@
 				  <option value="<?php echo $elemento['id']; ?>"><?php echo $elemento['codigo']; ?>
 				    </option> <?php
 				  } }
-				?>
+				   ?>
 				</select>
 				<br><br><br><br><br>
 				<label>Selecione a disciplina que será Requisito:</label><br><br><br>
-	            <select name = "idrequisito">
-				<?php
+	                        <select name = "idrequisito">
+				  <?php
 				  $sql2="SELECT * FROM requisito";
 				  $resultado2= mysqli_query($conn,$sql2);
 				  while($elemento2 = mysqli_fetch_assoc($resultado2)){ ?>
 				  <option value="<?php echo $elemento2['id']; ?>"><?php echo $elemento2['codigo']; ?>
 				    </option> <?php
 				  }
-				?>
+				  ?>
 				</select>
 				 <br><br><br><br><br>
-	            <button class="botao" name="Cadastrar">Cadastrar</button>
-                </form>
+	                           <button class="botao" name="Cadastrar">Cadastrar</button>
+                               </form>
 				   <br><br><br><br><br>
 				</ul>
 					
