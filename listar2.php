@@ -21,7 +21,7 @@ if ($conn->connect_error) {
 	}
 	 
  </style>";
- echo "<table>";
+  echo "<table>";
   echo "<tr>
     <th>Código:</th>
     <th>Nome:</th>
@@ -39,7 +39,7 @@ if ($conn->connect_error) {
 	$resultado = $conn->query($sql);
 	if ($resultado->num_rows > 0) {
 
-		while ($linha = mysqli_fetch_assoc($resultado)) {
+	while ($linha = mysqli_fetch_assoc($resultado)) {
             echo "<tr>";
 	    echo "<td>" . $linha["codigodisciplina"] . "</td>";
             echo "<td>" . $linha["nome"] . "</td>";
