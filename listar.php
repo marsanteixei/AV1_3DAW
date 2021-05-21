@@ -31,8 +31,8 @@
 				<h1>Disciplinas Cadastradas com Pre Requisito: </h1>
 				<br>
 				     <?php
-                     include "listar2.php";
-                     ?>
+                                         include "listar2.php";
+                                      ?>
 				   <br><br><br><br><br>
 				</ul>
 					
