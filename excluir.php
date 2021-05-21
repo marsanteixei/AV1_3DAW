@@ -3,7 +3,7 @@
 	  $user = "root";
 	  $password = "";
 	  $dataBaseName="av1";
-      $conn = mysqli_connect($server,$user,$password,$dataBaseName) or die("connection error: " . $conn->connect_error);
+          $conn = mysqli_connect($server,$user,$password,$dataBaseName) or die("connection error: " . $conn->connect_error);
 
 ?>
 
