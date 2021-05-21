@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 		<head>
 			<meta charset="utf-8">
@@ -27,24 +27,13 @@
 					<li class="b"><a href="criarUsuario.html" class="m">Cadastro</a></li>
 				</ul>
 				<ul>
-				<h1>Criar Usuário: </h1><br>
-				<h2><a href="updoc.html">Upload de documento para criação</a><h2>
+				<h1>Criar Usuário: </h1>
 				<br>
-				<form action="criarUsuario.php" method="post">
-	            <label>Nome do usuário:</label><br><br>
-	            <input type="text" name="nome" placeholder="Digite o nome"><br><br>
-	            <label>Email :</label><br><br>
-	            <input type="text" name="email" placeholder="Digite o email"><br><br>
-	            <label>Senha :</label><br><br>
-	            <input type="text" name="senha" placeholder="Digite a senha"><br><br>
-				<label>Perfil :</label><br><br>
-				<select name="perfil">
-				<option>aluno</option>
-                <option>professor</option>
-				 <option>administrador</option>
-	            </select><br><br><br><br>
-	            <button class="botao" name="Cadastrar">Cadastrar</button>
-                </form>
+				<form action="recebe_upload.php" method="post" enctype="multipart/form-data">
+				<label>Up de arquivo:</label><br><br>
+                <input type="file" name="arquivo" />
+                <button class="botao" name="enviar">Enviar</button>
+				</form>
 				   <br><br><br><br><br>
 				</ul>
 					
