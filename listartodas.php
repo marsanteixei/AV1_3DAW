@@ -8,11 +8,11 @@
 			<style>
                     table{
 		            width:650px;
-	                height:410px;
+	                    height:410px;
 		            margin-left:350px;
 		            border: 6px ridge blue;
-					text-align:center;
-					}
+			    text-align:center;
+			}
 	        </style>
 			
 		</head>
