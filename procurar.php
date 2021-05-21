@@ -44,33 +44,33 @@ if ($conn->connect_error) {
 				<br><br>
 				<ul>
 				<form action="procurar.php" method="post">
-	            <label>Código da Disciplina:</label><br><br>
-	            <input type="text" name="codigo" placeholder="Digite o código"><br><br>
-				<br><br>
-	            <button class="botao" name="Procurar">Procurar</button>
-				<?php
-				if($_POST){
+	                           <label>Código da Disciplina:</label><br><br>
+	                           <input type="text" name="codigo" placeholder="Digite o código"><br><br>
+				   <br><br>
+	                             <button class="botao" name="Procurar">Procurar</button>
+				      <?php
+				        if($_POST){
 					$codigo=$_POST["codigo"];
 					$sql1 = "SELECT * FROM disciplina WHERE codigo='$codigo'";
 					$resultado = $conn->query($sql1);
-	            if ($resultado->num_rows > 0) {
-                while ($linha = mysqli_fetch_assoc($resultado)) {
-                    echo "<br><br><br>";
-                    echo "Código : ".$linha["codigo"]. "<br><br><br>";
-					echo "Nome : ".$linha["nome"]. "<br><br><br>";
-					echo "Período : ".$linha["periodo"]. "<br><br><br>";
-                    echo "Credito : ".$linha["credito"]. "<br><br><br>";
-					}
+	                                if ($resultado->num_rows > 0) {
+                                        while ($linha = mysqli_fetch_assoc($resultado)) {
+                                               echo "<br><br><br>";
+                                               echo "Código : ".$linha["codigo"]. "<br><br><br>";
+					       echo "Nome : ".$linha["nome"]. "<br><br><br>";
+					       echo "Período : ".$linha["periodo"]. "<br><br><br>";
+                                               echo "Credito : ".$linha["credito"]. "<br><br><br>";
+					      }
 
-	            }
-				 else {
-					   echo "<br><br><br>";
-		               echo "Não há disciplina cadastradas com esse código !";
-	                }	
-	                $conn->close();
+	                                  }
+				                 else {
+					                echo "<br><br><br>";
+		                                        echo "Não há disciplina cadastradas com esse código !";
+	                                              }	
+	                                           $conn->close();
 				    }
 				?>
-                </form>
+                               </form>
 				   <br><br><br><br><br>
 				</ul>
 				</ul>
